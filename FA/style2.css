@@ -1,0 +1,92 @@
+/* styles.css */
+
+/* Reiniciar márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el fondo */
+.background {
+    background-image: url('img/amar.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Contenedor para el contenido */
+.content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.212); /* Fondo semi-transparente para el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para el botón */
+.btn {
+    background-color: #9b00e2; /* Verde */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: 2s infinite;
+}
+
+.btn:hover {
+    background-color: #7e27a7; /* Verde oscuro al pasar el cursor */
+}
+
+/* Estilo para el texto */
+.texto {
+    margin-top: 15px 15px 15px 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.gradient-text-red{
+    font-weight: bold;
+    border-color: #fff8fd;
+    background: linear-gradient(150deg, #740496, #b91095, #ec09c6, #d10dc7,#690986);
+    background-size: 400% 400%;
+    -webkit-background-clip: text; /* Clip del fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el color del texto transparente */
+    animation: gradientAnimation 1s ease infinite; /* Aplica la animación */
+    }
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .texto {
+        font-size: 1rem;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
